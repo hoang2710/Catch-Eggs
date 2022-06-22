@@ -20,6 +20,7 @@ public class GameController : MonoBehaviour
     public static void GetScore(int score)
     {
         playerScore += score;
-
+        
     }
+
 }

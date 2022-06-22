@@ -135,3 +135,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eggPoint: 10
+  ScoreTextPopupPrefab: {fileID: 7289549609541909906, guid: 3247caae23ba56446a361b8644d18087, type: 3}
