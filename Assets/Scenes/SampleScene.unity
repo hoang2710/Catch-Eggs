@@ -366,6 +366,7 @@ MonoBehaviour:
   EggPrefab:
   - {fileID: 7303126490778060254, guid: a75de7551a2e81c4b9449fe82531ab9b, type: 3}
   - {fileID: 7303126490778060254, guid: 26987d5a68e26c743af55eafd00ebb4a, type: 3}
+  - {fileID: 7303126490778060254, guid: c3bc5275f22959a428bc761cb4a2f11e, type: 3}
   SpawnTime: 1
   spawnPosMinX: -8
   spawnPosMaxX: 8
@@ -522,7 +523,7 @@ GameObject:
   - component: {fileID: 1003251118}
   m_Layer: 5
   m_Name: ScoreText
-  m_TagString: Untagged
+  m_TagString: ScoreText
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -886,7 +887,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f63e275e80581a428a8a4dc4235d6ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ScoreText: {fileID: 1003251118}
 --- !u!1 &1960993569
 GameObject:
   m_ObjectHideFlags: 0
@@ -947,7 +947,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.7169812, g: 0.33896548, b: 0.1318975, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -965,7 +965,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1960993569}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.67, y: -3.19, z: 0}
+  m_LocalPosition: {x: 0, y: -3.19, z: 0}
   m_LocalScale: {x: 2, y: 0.25, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

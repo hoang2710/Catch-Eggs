@@ -13,10 +13,15 @@ public class EggSpawner : MonoBehaviour
     float spawnPosMaxX;
     [SerializeField]
     float spawnPosY;
+    public delegate void MyDelegate();
+    public static MyDelegate myDelegate;
+    [SerializeField]
+    float timeToNextStage = 30f;
     // Start is called before the first frame update
     void Start()
     {
         timer = Time.time;
+        myDelegate = SpawnEgg;
     }
 
     // Update is called once per frame
@@ -24,8 +29,12 @@ public class EggSpawner : MonoBehaviour
     {
         if (timer < Time.time)
         {
-            SpawnEgg();
+            myDelegate();
             timer = Time.time + SpawnTime;
+        }
+        if( timer > timeToNextStage){
+            myDelegate += myDelegate;
+            timeToNextStage = Time.time + timeToNextStage;
         }
     }
 
@@ -40,4 +49,6 @@ public class EggSpawner : MonoBehaviour
         Vector3 pos = new Vector3(ranPosX, spawnPosY, 0);
         Instantiate(EggPrefab[ran], pos, Quaternion.identity);
     }
+
+    
 }

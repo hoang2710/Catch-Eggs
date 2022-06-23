@@ -11,6 +11,7 @@ public class GameController : MonoBehaviour
     void Start()
     {
         ScoreText = GameObject.FindGameObjectWithTag("ScoreText").GetComponent<TMP_Text>();
+        ScoreText.text = "0";
     }
 
     public static void GetScore(int score)
