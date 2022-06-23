@@ -14,13 +14,14 @@ public class EggSpawner : MonoBehaviour
     [SerializeField]
     float spawnPosY;
     public delegate void MyDelegate();
-    public static MyDelegate myDelegate;
+    public MyDelegate myDelegate;
     [SerializeField]
     float timeToNextStage = 30f;
     // Start is called before the first frame update
     void Start()
     {
         timer = Time.time;
+        timeToNextStage = Time.time + timeToNextStage;
         myDelegate = SpawnEgg;
     }
 
@@ -33,7 +34,7 @@ public class EggSpawner : MonoBehaviour
             timer = Time.time + SpawnTime;
         }
         if( timer > timeToNextStage){
-            myDelegate += myDelegate;
+            myDelegate += SpawnEgg;
             timeToNextStage = Time.time + timeToNextStage;
         }
     }
