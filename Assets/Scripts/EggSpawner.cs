@@ -32,7 +32,7 @@ public class EggSpawner : MonoBehaviour
     void SpawnEgg()
     {
         int ran = 0;
-        if (EggPrefab.Length > 1 && Random.Range(0, 100) < 30)
+        if (EggPrefab.Length > 1 && Random.Range(0, 100) < 50)
         {
             ran = Random.Range(1, EggPrefab.Length);
         }

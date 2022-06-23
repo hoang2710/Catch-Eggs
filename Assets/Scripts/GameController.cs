@@ -5,22 +5,23 @@ using TMPro;
 
 public class GameController : MonoBehaviour
 {
-    public TMP_Text ScoreText;
+    public static TMP_Text ScoreText;
     static int playerScore = 0;
     // Start is called before the first frame update
     void Start()
     {
-        // ScoreText.text = "";
+        ScoreText = GameObject.FindGameObjectWithTag("ScoreText").GetComponent<TMP_Text>();
     }
 
-    private void Update()
-    {
-        ScoreText.text = playerScore.ToString();
-    }
     public static void GetScore(int score)
     {
         playerScore += score;
-        
+        if (playerScore < 0)
+        {
+            playerScore = 0;
+        }
+
+        ScoreText.text = playerScore.ToString();
     }
 
 }
