@@ -5,8 +5,7 @@ using UnityEngine;
 public class EggSpawner : MonoBehaviour
 {
     public GameObject[] EggPrefab;
-    float timer;
-    public float SpawnTime = 2f;
+    // public float SpawnTime = 2f;
     [SerializeField]
     float spawnPosMinX;
     [SerializeField]
@@ -14,13 +13,12 @@ public class EggSpawner : MonoBehaviour
     [SerializeField]
     float spawnPosY;
     public delegate void MyDelegate();
-    public MyDelegate myDelegate;
+    public static MyDelegate myDelegate;
     [SerializeField]
     float timeToNextStage = 30f;
     // Start is called before the first frame update
     void Start()
     {
-        timer = Time.time;
         timeToNextStage = Time.time + timeToNextStage;
         myDelegate = SpawnEgg;
     }
@@ -28,12 +26,7 @@ public class EggSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (timer < Time.time)
-        {
-            myDelegate();
-            timer = Time.time + SpawnTime;
-        }
-        if( timer > timeToNextStage){
+        if( Time.time > timeToNextStage){
             myDelegate += SpawnEgg;
             timeToNextStage = Time.time + timeToNextStage;
         }

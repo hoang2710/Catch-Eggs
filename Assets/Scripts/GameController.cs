@@ -13,6 +13,8 @@ public class GameController : MonoBehaviour
     float timeToPlay = 50;
     public GameObject GameOverPanel;
     bool isGameOver = false;
+    public float SpawnTime = 1.4f;
+    float timer;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +35,13 @@ public class GameController : MonoBehaviour
         }
         timeToPlay -= Time.deltaTime;
         TimerText.text = ((int)timeToPlay).ToString();
+
+        if (timer < Time.time)
+        {
+            EggSpawner.myDelegate();
+            timer = Time.time + SpawnTime;
+        }
+
     }
     public static void GetScore(int score)
     {
