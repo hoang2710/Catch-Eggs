@@ -12,6 +12,7 @@ public class GameController : MonoBehaviour
     [SerializeField]
     float timeToPlay = 50;
     public GameObject GameOverPanel;
+    bool isGameOver = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,9 +26,10 @@ public class GameController : MonoBehaviour
     }
     void Update()
     {
-        if (timeToPlay <= 0)
+        if (timeToPlay <= 0 && !isGameOver)
         {
             GameOver();
+            isGameOver = true;
         }
         timeToPlay -= Time.deltaTime;
         TimerText.text = ((int)timeToPlay).ToString();
