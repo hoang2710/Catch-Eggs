@@ -99,8 +99,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1, y: 2}
-  m_Direction: 0
+  m_Size: {x: 2.7949245, y: 2.215961}
+  m_Direction: 1
 --- !u!50 &7303126490778060253
 Rigidbody2D:
   serializedVersion: 4
@@ -136,5 +136,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eggPoint: 30
   ScoreTextPopupPrefab: {fileID: 7289549609541909906, guid: 3247caae23ba56446a361b8644d18087, type: 3}
-  ScoreCanvas: {fileID: 2146491545611225288, guid: 80e6a348deaefe449b515af9cb7d327d, type: 3}
-  aaa: {fileID: 7289549609541909906, guid: 3247caae23ba56446a361b8644d18087, type: 3}

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7303126490778060253}
   - component: {fileID: -4681899961405983266}
   m_Layer: 0
-  m_Name: Egg 1
+  m_Name: Egg 3
   m_TagString: Egg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: b8c07ceeb3ac11242aef3a52ffb231c3, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.7228436, g: 0.9528302, b: 0.23820755, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -134,5 +134,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 719c8ffa16439d64496e5a4415110b25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eggPoint: 10
+  eggPoint: -20
   ScoreTextPopupPrefab: {fileID: 7289549609541909906, guid: 3247caae23ba56446a361b8644d18087, type: 3}
